@@ -7,7 +7,7 @@ Install the [NLog.AzureAppendBlob.Standard](https://www.nuget.org/packages/NLog.
 
     <nlog>
         <extensions>
-            <add assembly="NLog.AzureBlobStorage" />
+            <add assembly="NLog.AzureBlobStorage.Standard" />
         </extensions>
     </nlog>
 
