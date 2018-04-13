@@ -1,5 +1,5 @@
 # NLog.AzureAppendBlob.Standard
-An NLog target using Microsoft Azure Storage Append Blobs With .NET Standard2.0, reference of [NLog.AzureAppendBlob](https://github.com/heemskerkerik/NLog.AzureAppendBlob).
+An NLog target using Microsoft Azure Storage Append Blobs With .NET Standard 2.0, reference of [NLog.AzureAppendBlob](https://github.com/heemskerkerik/NLog.AzureAppendBlob).
 
 ## How To Use ##
 Install the [NLog.AzureAppendBlob.Standard](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard/) package from NuGet. If you use NLog 4.x or higher, NLog will automatically load the extension assembly. Otherwise, put the following in your NLog configuration:
@@ -20,14 +20,21 @@ The target's type name is ``AzureAppendBlob``.
 
 ### Sample ###
     <targets async="true">
-      <target type="AzureAppendBlob" 
-              name="Azure" 
-              layout="${longdate} ${level:uppercase=true} - ${message}" 
-              connectionString="${appsetting:name=StorageConnectionString}" 
-              container="logtest" 
-              blobName="${date:format=yyyy-MM-dd}.log" />
+        <target xsi:type="AzureAppendBlob" 
+                name="Azure" 
+                layout="${longdate} ${uppercase:${level}} - ${message}" 
+                connectionString="YourConnectionString" 
+                container="YourContainer" 
+                blobName="logs/${shortdate}.log" />
     </targets>
     <rules>
-    
+        <logger name="*" minlevel="Trace" writeTo="Azure"/>
+    </rules>
 
-See the [NLog Wiki](https://github.com/NLog/NLog) for more information about configuring NLog.
+You can see [NLog Wiki](https://github.com/NLog/NLog) for more information about configuring NLog.
+
+### Building ###
+The project is a .NET Standard 2.0 project. If you wish to build it yourself, you'll need install Visual Studio 2017 or Visual Studio Code.
+
+### Test App ###
+NLog.AzureAppendBlob.Standard.Test is a console program that is preconfigured to use the ``AzureAppendBlob`` target. To test it, you'll have to create an Azure storage account and a blob account.
