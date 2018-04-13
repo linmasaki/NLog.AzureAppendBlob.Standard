@@ -1,5 +1,5 @@
 # NLog.AzureAppendBlob.Standard
-[![Version](https://img.shields.io/nuget/vpre/NLog.AzureAppendBlob.Standard.svg)](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard)<br>
+[![Version](https://img.shields.io/nuget/vpre/NLog.AzureAppendBlob.Standard.svg)](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard)  
 An NLog target using Microsoft Azure Storage Append Blobs With .NET Standard 2.0, reference of [NLog.AzureAppendBlob](https://github.com/heemskerkerik/NLog.AzureAppendBlob).
 
 ## How To Use ##
@@ -7,9 +7,17 @@ Install the [NLog.AzureAppendBlob.Standard](https://www.nuget.org/packages/NLog.
 
     <nlog>
         <extensions>
-            <add assembly="NLog.AzureBlobStorage.Standard" />
+            <add assembly="NLog.AzureAppendBlob.Standard" />
         </extensions>
     </nlog>
+
+If still not work, you can try to Register manually (choose one) in your application start. e.g. main(), app_start().  
+```C#
+1. Target.Register<NLog.AzureAppendBlob.Standard.AzureAppendBlobTarget>("AzureAppendBlob"); //generic
+```
+```C#
+2. ConfigurationItemFactory.Default.Targets.RegisterDefinition("AzureAppendBlob", typeof(NLog.AzureAppendBlob.Standard.AzureAppendBlobTarget)); //old syntax
+```  
 
 ### Target configuration ###
 The target's type name is ``AzureAppendBlob``.
