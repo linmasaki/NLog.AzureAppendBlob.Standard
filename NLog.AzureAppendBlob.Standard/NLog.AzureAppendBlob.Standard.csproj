@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Authors>CoCo Lin</Authors>
+    <AssemblyName>NLog.AzureAppendBlob.Standard</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>NLog.AzureAppendBlob.Standard</PackageId>
+    <Version>1.0.1</Version>    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.5.0" />
+    <PackageReference Include="WindowsAzure.Storage" Version="8.7.0" />
+  </ItemGroup>
+
+</Project>
