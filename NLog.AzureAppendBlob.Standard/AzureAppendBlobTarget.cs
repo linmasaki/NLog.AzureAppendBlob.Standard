@@ -64,8 +64,9 @@ namespace NLog.AzureAppendBlob.Standard
                 {
                     try
                     {
-                        _blob.Properties.ContentType = "text/plain";
+                        _blob.Properties.ContentType = "text/plain";                        
                         _blob.CreateOrReplaceAsync().Wait();
+                        _blob.SetPropertiesAsync().Wait();
                     }
                     catch (StorageException ex) when (ex.RequestInformation.HttpStatusCode == (int)HttpStatusCode.Conflict)
                     {
