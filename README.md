@@ -49,10 +49,8 @@ The target's type name is ``AzureAppendBlob``.
 
 You can see [NLog Wiki](https://github.com/NLog/NLog) for more information about configuring NLog.
 
-### Building ###
-The project is a .NET Standard 2.0 project. If you wish to build it yourself, you'll need install Visual Studio 2017 or Visual Studio Code.
 
-### Test App ###
+## Test App ##
 NLog.AzureAppendBlob.Standard.Test is a console program that is preconfigured to use the ``AzureAppendBlob`` target. To test it, you'll have to create an Azure storage account and a blob account.
 
 ## Note ##
