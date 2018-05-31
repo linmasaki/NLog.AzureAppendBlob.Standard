@@ -1,10 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <Title>NLog.AzureAppendBlob.Standard</Title>
     <Authors>CoCo Lin</Authors>
     <AssemblyName>NLog.AzureAppendBlob.Standard</AssemblyName>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>NLog.AzureAppendBlob.Standard</PackageId>
-    <Version>1.0.2</Version>    
+    <Description>An NLog target using Microsoft Azure Storage Append Blobs With .NET Standard 2.0</Description>
+    <PackageProjectUrl>https://github.com/linmasaki/NLog.AzureAppendBlob.Standard</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/linmasaki/CoCoPackageIcon/master/cocodotnet64.png</PackageIconUrl>
+    <PackageTags>netcore2 netstandard2.0 NLog NLog.Target Azure Storage AppendBlob</PackageTags>
+    <Version>1.0.3</Version>    
   </PropertyGroup>
 
   <ItemGroup>
