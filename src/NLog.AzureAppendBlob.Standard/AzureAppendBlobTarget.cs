@@ -52,8 +52,8 @@ namespace NLog.AzureAppendBlob.Standard
                 return;
             }
 
-            string containerName = Container.Render(logEvent);
-            string blobName = BlobName.Render(logEvent);
+            var containerName = Container.Render(logEvent);
+            var blobName = BlobName.Render(logEvent);
 
             if (_container == null || _container.Name != containerName)
             {
