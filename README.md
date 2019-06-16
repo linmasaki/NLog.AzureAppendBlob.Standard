@@ -1,9 +1,10 @@
 # NLog.AzureAppendBlob.Standard
 [![Version](https://img.shields.io/nuget/vpre/NLog.AzureAppendBlob.Standard.svg)](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard)  
-An NLog target using Microsoft Azure Storage Append Blobs With .NET Standard 2.0, reference of [NLog.AzureAppendBlob](https://github.com/heemskerkerik/NLog.AzureAppendBlob).
+[![Downloads](https://img.shields.io/nuget/dt/NLog.AzureAppendBlob.Standard.svg)](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard.svg)
+An NLog target using Microsoft Azure Storage Append Blobs in .Net Core App(1.x ~ 2.x), reference this [NLog.AzureAppendBlob](https://github.com/heemskerkerik/NLog.AzureAppendBlob).
 
 ## How To Use ##
-Install the [NLog.AzureAppendBlob.Standard](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard/) package from NuGet. If you use NLog 4.x or higher, NLog will automatically load the extension assembly. Otherwise, put the following in your NLog configuration(.NET Core has to do):
+Install the [NLog.AzureAppendBlob.Standard](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard/) package from NuGet. If you use NLog 4.x or higher, it will automatically load the extension assembly. In further, put the following in your NLog configuration(.Net Core must do):
 
 ```xml
 <nlog>
@@ -26,9 +27,9 @@ The target's type name is ``AzureAppendBlob``.
 
 * **layout** - (layout) Content text to write.
 * **connectionString** - (layout) The connection string for the storage account to use. Consult the Azure Portal to retrieve this.
-* **container** - (layout) The name of the blob container where logs will be placed. Will be created when it does not exist.
-* **blobName** - (layout) Name of the blob to write to. Will be created when it does not exist(only once).
-* **forceCheck(Optional)** - (bool) Check target blob does existing or not when write to at any time.
+* **container** - (layout) The name of the blob container where logs will be placed. It will be created automatically when it does not exist.
+* **blobName** - (layout) The name of the blob to write to. It will be created automatically when it does not exist(only once, unless you set **forceCheck** to ``true``).
+* **forceCheck(Optional)** - (bool) Check if the target blob exists for each write.
 
 ### Sample ###
 
