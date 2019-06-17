@@ -1,6 +1,6 @@
 # NLog.AzureAppendBlob.Standard
 [![Version](https://img.shields.io/nuget/vpre/NLog.AzureAppendBlob.Standard.svg)](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard) 
-[![Downloads](https://img.shields.io/nuget/dt/NLog.AzureAppendBlob.Standard.svg)](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard.svg)  
+[![Downloads](https://img.shields.io/nuget/dt/NLog.AzureAppendBlob.Standard.svg)](https://www.nuget.org/packages/NLog.AzureAppendBlob.Standard)  
 An NLog target using Microsoft Azure Storage Append Blobs in .Net Core App(1.x ~ 2.x), reference this [NLog.AzureAppendBlob](https://github.com/heemskerkerik/NLog.AzureAppendBlob).
 
 ## How To Use ##
