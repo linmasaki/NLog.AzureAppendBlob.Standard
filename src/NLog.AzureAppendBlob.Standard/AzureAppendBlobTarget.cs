@@ -1,13 +1,10 @@
-using System;
-using System.ComponentModel;
-using System.IO;
 using System.Net;
+using System.ComponentModel;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 using NLog.Config;
 using NLog.Layouts;
 using NLog.Targets;
-
 
 namespace NLog.AzureAppendBlob.Standard
 {
